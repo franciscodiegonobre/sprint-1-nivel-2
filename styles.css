@@ -1,0 +1,222 @@
+*, *::before, *::after {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a, .article-text, .footer-text {
+    color: rgb(116, 110, 110);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+    a:hover {
+        color: rgb(171, 162, 162);
+    }
+
+.parent {
+    display: flex;
+    flex-flow: column nowrap;
+    background: #fff;
+}
+
+.header {
+    background: url(./images/header.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    display: flex;
+    flex-flow: column nowrap;
+    padding-bottom: 0;
+    margin: 5px;
+}
+
+    .nav {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100px;
+        align-items: center;
+    }
+        .nav a {
+            padding: 0px 10px;
+        }
+
+        .logo {
+            flex: 1 1 auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-menu {
+            flex: 5 1 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .social {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+    .image-header {
+        background: #0D4C92;
+    }
+     
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        background: rgba(0, 0, 0, .1);
+        color: rgb(229, 123, 9, 0.7);
+        font-size: 1.5em;
+        font-weight: 400;
+        height: 100px;
+        margin: 30px 50px 0px 50px;
+        padding-top: 30px;
+    }
+
+.section {
+    background: #fff;
+    display: flex;
+}
+    .articles {
+        background: #ccc;
+        flex: 80;
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: 5px;
+    }
+
+        .article {
+            background: #FFE9B1;
+            flex: 1 1 40%;
+            margin: 5px;
+        }
+
+            h2 {
+                background: #c72134;
+                color: #fff;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin-top: 0;
+                padding-top: 10px;
+                font-size: 1em;
+                letter-spacing: 0.2em;
+            }
+
+            .image-container {
+                position: relative;
+                padding: 0;
+            }
+
+                .article-date{
+                    position: absolute;
+                    bottom: 3px;
+                    left: 16px;
+                    color: #e5f06d;
+                    padding: 0;
+                }
+
+            .article img {
+                max-width: 100%;
+                max-height: 100%;
+                padding: 0;
+            }
+
+            .article-text {
+                column-count: 2; column-gap: 1.5em;
+                -moz-column-count: 2; -moz-column-gap: 1.5em; 
+                -webkit-column-count: 2; -webkit-column-gap: 1.5em;
+            }
+
+    .aside {
+        background: #ccc;
+        flex: 20;
+        text-align: center;
+    }
+
+.bottom-text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer {
+    background: #ccc;
+    margin: 0 5px;
+    padding: 0px 5px;
+}
+
+    .footer-div {
+        background: #FFE9B1;
+    }
+
+        .footer-text {
+            margin: 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }  
+
+    .articles {
+        flex-direction: column;
+        margin: 0;
+    } 
+    
+    .aside {
+        margin-top: 5px
+    }
+}
+
+@media (max-width: 512px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav {
+        flex-flow: row wrap;
+        height: auto;
+    }
+
+    .social {
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    h1 {
+        height: auto;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .social {
+        flex-direction: row;
+        height: 150px;
+    }
+
+    h1 {
+        height: auto;
+    }
+
+}
